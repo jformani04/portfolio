@@ -17,7 +17,7 @@ export default function Footer() {
             <GithubIcon />
           </a>
           <a
-            href="https://linkedin.com/in/jformani"
+            href="https://www.linkedin.com/in/jason-formani-086aaa33b"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/35 transition-colors hover:text-white"

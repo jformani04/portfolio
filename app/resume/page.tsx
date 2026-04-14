@@ -50,8 +50,8 @@ export default function ResumePage() {
             <a href="https://github.com/jformani" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
               <GithubIcon /> github.com/jformani
             </a>
-            <a href="https://linkedin.com/in/jformani" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
-              <LinkedinIcon /> linkedin.com/in/jformani
+            <a href="https://www.linkedin.com/in/jason-formani-086aaa33b" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
+              <LinkedinIcon /> www.linkedin.com/in/jason-formani-086aaa33b
             </a>
             <span className="flex items-center gap-1.5">
               <LocationIcon /> Ohio, USA

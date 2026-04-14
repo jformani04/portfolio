@@ -17,8 +17,8 @@ const contacts = [
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/jformani',
-    href: 'https://linkedin.com/in/jformani',
+    value: 'www.linkedin.com/in/jason-formani-086aaa33b',
+    href: 'https://www.linkedin.com/in/jason-formani-086aaa33b',
     icon: <LinkedinIcon />,
   },
 ];
