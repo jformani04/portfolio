@@ -44,8 +44,8 @@ export default function ResumePage() {
             Computer Science Student · Aspiring Data Engineer
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/50">
-            <a href="mailto:jformani@example.com" className="hover:text-blue transition-colors flex items-center gap-1.5">
-              <EmailIcon /> jformani@example.com
+            <a href="mailto:jformani04@outlook.com" className="hover:text-blue transition-colors flex items-center gap-1.5">
+              <EmailIcon /> jformani04@outlook.com
             </a>
             <a href="https://github.com/jformani" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
               <GithubIcon /> github.com/jformani

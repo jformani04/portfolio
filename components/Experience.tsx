@@ -6,7 +6,7 @@ const experience = [
   {
     role: 'IT Support Specialist',
     org: 'Ashland University',
-    date: 'Jan 2026 — Present',
+    date: 'January 2026 – Present',
     current: true,
     bullets: [
       'Provide technical support for faculty, staff, and students across campus systems.',
@@ -30,7 +30,8 @@ const experience = [
 ];
 
 export default function Experience() {
-  const ref = useReveal<HTMLDivElement>();
+  const expRef = useReveal<HTMLDivElement>();
+  const eduRef = useReveal<HTMLDivElement>();
 
   return (
     <section id="experience" className="py-24 sm:py-32 bg-surface/40">
@@ -39,7 +40,7 @@ export default function Experience() {
         <h2 className="section-heading">Where I&apos;ve Worked</h2>
         <p className="section-sub mb-12">Roles that shaped my technical foundations.</p>
 
-        <div className="space-y-5" ref={ref}>
+        <div ref={expRef} className="space-y-5">
           {experience.map(({ role, org, date, current, bullets, tags }, i) => (
             <div
               key={role}
@@ -80,7 +81,7 @@ export default function Experience() {
         </div>
 
         {/* Education */}
-        <div className="mt-16">
+        <div ref={eduRef} className="mt-16">
           <div className="section-label">Education</div>
           <div className="reveal card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 mt-2">
             <div className="w-14 h-14 rounded-xl bg-blue/10 border border-blue/20 text-blue font-mono font-bold text-base flex items-center justify-center shrink-0">

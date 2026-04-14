@@ -5,8 +5,8 @@ import { useReveal } from '@/hooks/useReveal';
 const contacts = [
   {
     label: 'Email',
-    value: 'jformani@example.com',
-    href: 'mailto:jformani@example.com',
+    value: 'jformani04@outlook.com',
+    href: 'mailto:jformani04@outlook.com',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
         <rect x="2" y="4" width="20" height="16" rx="2" />

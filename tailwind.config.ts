@@ -8,17 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg:        '#0a0b0f',
-        surface:   '#111318',
-        surface2:  '#161920',
-        blue:      '#4f9cf9',
-        purple:    '#a855f7',
-        teal:      '#2dd4bf',
-        green:     '#22c55e',
+        bg:       '#0a0b0f',
+        surface:  '#111318',
+        surface2: '#161920',
+        blue:     '#4f9cf9',
+        purple:   '#a855f7',
+        teal:     '#2dd4bf',
+        green:    '#22c55e',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        // Consume the CSS variables injected by next/font
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
       transitionTimingFunction: {
         spring: 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -30,14 +31,14 @@ const config: Config = {
         `,
       },
       backgroundSize: {
-        'grid': '40px 40px',
+        grid: '40px 40px',
       },
       keyframes: {
         fadeInUp: {
           from: { opacity: '0', transform: 'translateY(24px)' },
           to:   { opacity: '1', transform: 'translateY(0)' },
         },
-        pulse2: {
+        pulseDot: {
           '0%, 100%': { opacity: '1', transform: 'scale(1)' },
           '50%':       { opacity: '0.4', transform: 'scale(1.5)' },
         },
@@ -47,20 +48,15 @@ const config: Config = {
           '51%':  { transformOrigin: 'bottom' },
           '100%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
         },
-        spin2: {
+        spinSlow: {
           to: { transform: 'rotate(360deg)' },
-        },
-        shimmer: {
-          '0%':   { backgroundPosition: '-200% center' },
-          '100%': { backgroundPosition: '200% center' },
         },
       },
       animation: {
-        'fade-up':    'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'pulse-dot':  'pulse2 2s ease-in-out infinite',
+        'fade-up':    'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'pulse-dot':  'pulseDot 2s ease-in-out infinite',
         'scroll-line':'scrollLine 2s ease-in-out infinite',
-        'spin-slow':  'spin2 8s linear infinite',
-        'shimmer':    'shimmer 3s linear infinite',
+        'spin-slow':  'spinSlow 8s linear infinite',
       },
     },
   },
