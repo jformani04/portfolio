@@ -1,21 +1,21 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const links = [
-  { href: '#about',      label: 'About' },
-  { href: '#skills',     label: 'Skills' },
-  { href: '#projects',   label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
-  { href: '#contact',    label: 'Contact' },
+  { href: '#education', label: 'Education' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export default function Nav() {
-  const [scrolled,  setScrolled]  = useState(false);
-  const [menuOpen,  setMenuOpen]  = useState(false);
-  const [activeId,  setActiveId]  = useState('');
-  const navRef = useRef<HTMLElement>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -25,115 +25,101 @@ export default function Nav() {
 
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>('section[id]');
-    const obs = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) setActiveId(e.target.id); });
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
       },
-      { threshold: 0.4 },
+      { threshold: 0.35, rootMargin: '-15% 0px -45% 0px' },
     );
-    sections.forEach((s) => obs.observe(s));
-    return () => obs.disconnect();
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav
-      ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-bg/80 backdrop-blur-xl border-b border-white/[0.07] shadow-[0_1px_0_rgba(255,255,255,0.04)]'
-          : 'bg-transparent'
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'border-b border-white/10 bg-bg/80 backdrop-blur-xl' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="font-mono font-bold text-lg text-white tracking-tight hover:text-blue transition-colors"
-        >
+      <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-6 py-4">
+        <Link href="/" className="font-mono text-lg font-semibold tracking-[0.2em] text-white">
           JF<span className="text-blue">.</span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-1">
-          {links.map(({ href, label }) => (
-            <li key={href}>
+        <div className="hidden items-center gap-2 lg:flex">
+          {links.map(({ href, label }) => {
+            const active = activeId === href.slice(1);
+            return (
               <a
+                key={href}
                 href={href}
-                className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                  activeId === href.slice(1)
-                    ? 'text-blue'
-                    : 'text-white/60 hover:text-white'
+                className={`rounded-full px-4 py-2 text-sm transition-all ${
+                  active
+                    ? 'bg-white/[0.05] text-white'
+                    : 'text-white/60 hover:bg-white/[0.04] hover:text-white'
                 }`}
               >
                 {label}
               </a>
-            </li>
-          ))}
-          <li>
-            <Link
-              href="/resume"
-              className="ml-2 px-4 py-1.5 rounded-lg text-sm border border-white/20 text-white/80 hover:border-blue/50 hover:text-blue hover:bg-blue/5 transition-all"
-            >
-              View Resume
-            </Link>
-          </li>
-        </ul>
+            );
+          })}
+          <Link href="/resume" className="btn btn-outline btn-sm ml-2">
+            View Resume
+          </Link>
+        </div>
 
-        {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen((o) => !o)}
+          type="button"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
         >
-          <span
-            className={`block w-5 h-0.5 bg-white/70 transition-all duration-300 ${
-              menuOpen ? 'translate-y-2 rotate-45' : ''
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-white/70 transition-all duration-300 ${
-              menuOpen ? 'opacity-0 scale-x-0' : ''
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-white/70 transition-all duration-300 ${
-              menuOpen ? '-translate-y-2 -rotate-45' : ''
-            }`}
-          />
+          <span className="flex flex-col gap-1.5">
+            <span
+              className={`block h-0.5 w-5 bg-current transition-all ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
+            />
+            <span className={`block h-0.5 w-5 bg-current transition-all ${menuOpen ? 'opacity-0' : ''}`} />
+            <span
+              className={`block h-0.5 w-5 bg-current transition-all ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+            />
+          </span>
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
-        className={`md:hidden border-t border-white/[0.07] bg-bg/95 backdrop-blur-xl transition-all duration-300 overflow-hidden ${
-          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`overflow-hidden border-t border-white/10 bg-bg/95 backdrop-blur-xl transition-all duration-300 lg:hidden ${
+          menuOpen ? 'max-h-[30rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <ul className="flex flex-col px-6 py-4 gap-1">
-          {links.map(({ href, label }) => (
-            <li key={href}>
+        <div className="mx-auto max-w-6xl px-6 py-5">
+          <div className="grid gap-2">
+            {links.map(({ href, label }) => (
               <a
+                key={href}
                 href={href}
                 onClick={closeMenu}
-                className="block py-2.5 text-sm text-white/70 hover:text-white transition-colors"
+                className="rounded-2xl border border-white/10 px-4 py-3 text-sm text-white/70 transition-colors hover:bg-white/[0.04] hover:text-white"
               >
                 {label}
               </a>
-            </li>
-          ))}
-          <li className="pt-2 border-t border-white/[0.07]">
+            ))}
             <Link
               href="/resume"
               onClick={closeMenu}
-              className="block py-2.5 text-sm text-blue"
+              className="btn btn-primary mt-3 w-full"
             >
-              View Resume →
+              View Resume
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );

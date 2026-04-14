@@ -6,80 +6,81 @@ export default function About() {
   const ref = useReveal<HTMLDivElement>();
 
   return (
-    <section id="about" className="py-24 sm:py-32">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="section-label">01 — About</div>
-
-        <div className="grid md:grid-cols-[1fr_320px] gap-12 mt-2" ref={ref}>
-          {/* Text */}
+    <section id="about" className="section-shell">
+      <div className="section-inner">
+        <div className="section-kicker">01. About</div>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start" ref={ref}>
           <div className="reveal">
-            <h2 className="section-heading">Who I Am</h2>
-            <div className="space-y-4 text-white/60 leading-relaxed text-[15px]">
+            <h2 className="section-heading">A practical builder with a systems mindset.</h2>
+            <div className="mt-6 max-w-3xl space-y-5 text-base leading-8 text-white/60">
               <p>
-                I&apos;m a Computer Science student at Ashland University with a passion for
-                turning complex data challenges into elegant engineering solutions. My
-                background in IT Support gave me hands-on experience troubleshooting
-                systems and understanding infrastructure at a practical level — skills
-                that directly inform how I design reliable, fault-tolerant data systems.
+                I am a Computer Science student at Ashland University with a strong interest in
+                turning complex technical problems into thoughtful, reliable software solutions.
+                My background in IT support taught me how systems behave in the real world and
+                how to troubleshoot with patience, structure, and clarity.
               </p>
               <p>
-                I&apos;m now channeling that foundation into data engineering, building
-                pipelines that ingest, transform, and surface insights from raw data.
-                I care deeply about scalability, clean architecture, and writing code
-                that&apos;s maintainable long after the initial build.
+                That foundation now carries into my software work. I enjoy building data
+                workflows, backend services, and scalable application architecture that stay
+                maintainable as projects grow. I care about clean implementation, clear user
+                experience, and engineering choices that hold up over time.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {[
-                { num: '3+', label: 'Years CS Study' },
-                { num: '2+', label: 'Years IT Support' },
-              ].map(({ num, label }) => (
-                <div key={label} className="card p-5 rounded-xl">
-                  <div className="text-2xl font-bold text-white mb-0.5">{num}</div>
-                  <div className="text-xs text-white/40 font-mono">{label}</div>
+                { value: '3+', label: 'Years of CS study' },
+                { value: '2+', label: 'Years of IT support experience' },
+              ].map(({ value, label }) => (
+                <div key={label} className="card card-hover p-5">
+                  <p className="text-3xl font-semibold tracking-tight text-white">{value}</p>
+                  <p className="mt-2 text-sm text-white/50">{label}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Card */}
           <div className="reveal reveal-delay-1">
-            <div className="card rounded-2xl p-6 h-full">
-              {/* Avatar */}
-              <div className="flex justify-center mb-6">
-                <div className="relative w-20 h-20">
-                  <div
-                    className="absolute inset-0 rounded-full animate-spin-slow"
-                    style={{ background: 'conic-gradient(from 0deg, #4f9cf9, #a855f7, #2dd4bf, #4f9cf9)' }}
-                  />
-                  <div className="absolute inset-0.5 rounded-full bg-surface flex items-center justify-center">
-                    <span className="font-mono font-bold text-lg text-white/70">JF</span>
-                  </div>
+            <div className="panel p-6 sm:p-7">
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue/30 to-purple/20 text-lg font-semibold text-white">
+                  JF
+                </div>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-white/40">
+                    Profile
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-white">Focused on scalable engineering</p>
                 </div>
               </div>
 
-              {/* Info rows */}
-              <div className="divide-y divide-white/[0.06]">
+              <div className="mt-8 space-y-4">
                 {[
-                  { label: 'Status',    value: 'Available',          green: true },
-                  { label: 'Focus',     value: 'Data Engineering' },
-                  { label: 'Location',  value: 'Ohio, USA' },
+                  { label: 'Status', value: 'Available' },
+                  { label: 'Focus', value: 'Data Engineering' },
+                  { label: 'Based In', value: 'Ohio, USA' },
                   { label: 'Education', value: 'B.S. Computer Science' },
-                ].map(({ label, value, green }) => (
-                  <div key={label} className="flex justify-between items-center py-3 text-sm">
-                    <span className="text-white/40 font-mono text-xs">{label}</span>
-                    {green ? (
-                      <span className="flex items-center gap-1.5 text-green text-xs font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse-dot" />
-                        {value}
-                      </span>
-                    ) : (
-                      <span className="text-white/70 text-xs">{value}</span>
-                    )}
+                ].map(({ label, value }) => (
+                  <div
+                    key={label}
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.025] px-4 py-3"
+                  >
+                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">
+                      {label}
+                    </span>
+                    <span className="text-sm font-medium text-white/80">{value}</span>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-blue/20 bg-blue/10 p-5">
+                <p className="font-mono text-xs uppercase tracking-[0.22em] text-blue/80">
+                  Strengths
+                </p>
+                <p className="mt-3 text-sm leading-7 text-white/62">
+                  Troubleshooting, backend foundations, API design, data processing, and building
+                  software with clarity from the start.
+                </p>
               </div>
             </div>
           </div>

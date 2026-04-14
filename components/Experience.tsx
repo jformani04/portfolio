@@ -6,11 +6,11 @@ const experience = [
   {
     role: 'IT Support Specialist',
     org: 'Ashland University',
-    date: 'January 2026 – Present',
+    date: 'January 2026 - Present',
     current: true,
     bullets: [
       'Provide technical support for faculty, staff, and students across campus systems.',
-      'Manage hardware/software troubleshooting, network diagnostics, and account provisioning.',
+      'Manage hardware and software troubleshooting, network diagnostics, and account provisioning.',
       'Document and resolve tickets using ITSM workflows, consistently reducing resolution time.',
     ],
     tags: ['Windows', 'Networking', 'ITSM', 'Active Directory'],
@@ -30,69 +30,62 @@ const experience = [
 ];
 
 export default function Experience() {
-  const expRef = useReveal<HTMLDivElement>();
-  const eduRef = useReveal<HTMLDivElement>();
+  const ref = useReveal<HTMLDivElement>();
 
   return (
-    <section id="experience" className="py-24 sm:py-32 bg-surface/40">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="section-label">04 — Experience</div>
-        <h2 className="section-heading">Where I&apos;ve Worked</h2>
-        <p className="section-sub mb-12">Roles that shaped my technical foundations.</p>
+    <section id="experience" className="section-shell section-shell-muted">
+      <div className="section-inner">
+        <div className="section-kicker">04. Experience</div>
+        <h2 className="section-heading">Professional Experience</h2>
+        <p className="section-sub">
+          Roles that sharpened my technical support instincts and system-level thinking.
+        </p>
 
-        <div ref={expRef} className="space-y-5">
-          {experience.map(({ role, org, date, current, bullets, tags }, i) => (
-            <div
-              key={role}
-              className={`reveal${i > 0 ? ' reveal-delay-1' : ''} card rounded-2xl p-6 sm:p-8 hover:border-white/[0.12] transition-all duration-300`}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
-                <div>
-                  <h3 className="text-base font-semibold text-white">{role}</h3>
-                  <p className="text-sm text-blue/80 mt-0.5">{org}</p>
+        <div ref={ref} className="relative mt-12">
+          <div className="absolute bottom-0 left-[15px] top-0 hidden w-px bg-white/10 sm:block" />
+          <div className="space-y-8">
+            {experience.map(({ role, org, date, current, bullets, tags }, index) => (
+              <article
+                key={role}
+                className={`reveal relative sm:pl-12 ${index > 0 ? 'reveal-delay-1' : ''}`}
+              >
+                <div className="absolute left-0 top-7 hidden h-8 w-8 items-center justify-center rounded-full border border-blue/25 bg-bg sm:flex">
+                  <span className={`h-3 w-3 rounded-full ${current ? 'bg-blue' : 'bg-white/30'}`} />
                 </div>
-                <span
-                  className={`self-start sm:self-auto font-mono text-xs px-3 py-1 rounded-full border ${
-                    current
-                      ? 'border-green/30 bg-green/5 text-green'
-                      : 'border-white/10 bg-white/[0.03] text-white/40'
-                  }`}
-                >
-                  {date}
-                </span>
-              </div>
 
-              <ul className="space-y-2 mb-5">
-                {bullets.map((b) => (
-                  <li key={b} className="flex gap-3 text-sm text-white/55">
-                    <span className="text-blue/50 mt-0.5 shrink-0">→</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
+                <div className="panel p-6 sm:p-8">
+                  <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <h3 className="text-xl font-semibold text-white">{role}</h3>
+                        {current ? <span className="tag tag-blue">Current</span> : null}
+                      </div>
+                      <p className="mt-2 text-sm font-medium uppercase tracking-[0.18em] text-blue/80">
+                        {org}
+                      </p>
+                    </div>
+                    <p className="font-mono text-xs uppercase tracking-[0.22em] text-white/40">{date}</p>
+                  </div>
 
-              <div className="flex flex-wrap gap-2">
-                {tags.map((t) => (
-                  <span key={t} className="tag tag-dim">{t}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+                  <ul className="mt-6 space-y-3">
+                    {bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-3 text-sm leading-7 text-white/60">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue/65" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-        {/* Education */}
-        <div ref={eduRef} className="mt-16">
-          <div className="section-label">Education</div>
-          <div className="reveal card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 mt-2">
-            <div className="w-14 h-14 rounded-xl bg-blue/10 border border-blue/20 text-blue font-mono font-bold text-base flex items-center justify-center shrink-0">
-              AU
-            </div>
-            <div className="flex-1">
-              <h3 className="text-base font-semibold text-white">Ashland University</h3>
-              <p className="text-sm text-white/55 mt-0.5">Bachelor of Science in Computer Science</p>
-              <p className="text-xs text-white/35 font-mono mt-1">August 2023 — May 2026 (Expected)</p>
-            </div>
-            <span className="tag tag-blue self-start sm:self-auto">B.S. CS</span>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <span key={tag} className="tag tag-dim">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

@@ -20,14 +20,14 @@ export default function ResumePage() {
           </Link>
           <div className="flex items-center gap-3">
             <a
-              href="/resume.pdf"
-              download
+              href="/portfolioResume.png"
+              download="Jason-Formani-Resume.png"
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-blue text-white text-sm font-medium hover:bg-blue/90 hover:shadow-[0_0_20px_rgba(79,156,249,0.4)] transition-all"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
-              Download PDF
+              Download Resume
             </a>
           </div>
         </div>
@@ -166,14 +166,14 @@ export default function ResumePage() {
         {/* Download CTA */}
         <div className="mt-12 pt-8 border-t border-white/[0.07] flex justify-center">
           <a
-            href="/resume.pdf"
-            download
+            href="/portfolioResume.png"
+            download="Jason-Formani-Resume.png"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue text-white font-medium hover:bg-blue/90 hover:shadow-[0_0_30px_rgba(79,156,249,0.4)] transition-all"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
-            Download Resume PDF
+            Download Resume
           </a>
         </div>
       </main>
