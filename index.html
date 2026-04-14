@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Formani — Data Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">JF<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#skills" class="nav__mobile-link">Skills</a></li>
+        <li><a href="#projects" class="nav__mobile-link">Projects</a></li>
+        <li><a href="#experience" class="nav__mobile-link">Experience</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ─── Hero ─────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="container hero__inner">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Open to opportunities
+        </div>
+        <h1 class="hero__name">Jason Formani</h1>
+        <p class="hero__title">
+          Computer Science Student
+          <span class="hero__title-sep">|</span>
+          Aspiring Data Engineer
+        </p>
+        <p class="hero__tagline">
+          Building scalable data pipelines and backend systems that transform<br class="hide-mobile" />
+          raw data into actionable insights.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="https://github.com/jformani" target="_blank" rel="noopener" class="btn btn--outline">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="/resume.pdf" download class="btn btn--ghost">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+        <div class="hero__scroll">
+          <div class="hero__scroll-line"></div>
+          <span>scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── About ─────────────────────────────────────────────── -->
+    <section class="section" id="about">
+      <div class="container about__inner">
+        <div class="section__label">01 — About</div>
+        <div class="about__grid">
+          <div class="about__text">
+            <h2 class="section__heading">Who I Am</h2>
+            <p>
+              I'm a Computer Science student at Ashland University with a passion for
+              turning complex data challenges into elegant engineering solutions. My
+              background in IT Support gave me hands-on experience troubleshooting
+              systems and understanding infrastructure at a practical level — skills
+              that directly inform how I design reliable, fault-tolerant data systems.
+            </p>
+            <p>
+              I'm now channeling that foundation into data engineering, building
+              pipelines that ingest, transform, and surface insights from raw data.
+              I care deeply about scalability, clean architecture, and writing code
+              that's maintainable long after the initial build.
+            </p>
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-num">3+</span>
+                <span class="about__stat-label">Years CS Study</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num">2+</span>
+                <span class="about__stat-label">Years IT Support</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num">5+</span>
+                <span class="about__stat-label">Projects Built</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__card">
+            <div class="about__card-inner">
+              <div class="about__avatar">
+                <div class="about__avatar-ring"></div>
+                <div class="about__avatar-placeholder">JF</div>
+              </div>
+              <div class="about__card-info">
+                <div class="about__card-row">
+                  <span class="about__card-label">Status</span>
+                  <span class="about__card-value about__card-value--green">
+                    <span class="pulse-dot"></span>
+                    Available
+                  </span>
+                </div>
+                <div class="about__card-row">
+                  <span class="about__card-label">Focus</span>
+                  <span class="about__card-value">Data Engineering</span>
+                </div>
+                <div class="about__card-row">
+                  <span class="about__card-label">Location</span>
+                  <span class="about__card-value">Ohio, USA</span>
+                </div>
+                <div class="about__card-row">
+                  <span class="about__card-label">Education</span>
+                  <span class="about__card-value">B.S. Computer Science</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Skills ────────────────────────────────────────────── -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__label">02 — Skills</div>
+        <h2 class="section__heading">Technical Stack</h2>
+        <p class="section__sub">Technologies and concepts I work with regularly.</p>
+        <div class="skills__grid">
+
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Languages</h3>
+            <div class="skill-card__tags">
+              <span class="tag tag--blue">Python</span>
+              <span class="tag tag--blue">Java</span>
+              <span class="tag tag--blue">JavaScript</span>
+              <span class="tag tag--blue">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Tools & Platforms</h3>
+            <div class="skill-card__tags">
+              <span class="tag tag--purple">SQL</span>
+              <span class="tag tag--purple">Node.js</span>
+              <span class="tag tag--purple">Express</span>
+              <span class="tag tag--purple">Azure</span>
+              <span class="tag tag--purple">Git</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+                <path d="M15.54 8.46a5 5 0 010 7.07M8.46 8.46a5 5 0 000 7.07"/>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Concepts</h3>
+            <div class="skill-card__tags">
+              <span class="tag tag--teal">Data Pipelines</span>
+              <span class="tag tag--teal">Data Processing</span>
+              <span class="tag tag--teal">API Design</span>
+              <span class="tag tag--teal">Scalable Systems</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Projects ─────────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__label">03 — Projects</div>
+        <h2 class="section__heading">What I've Built</h2>
+        <p class="section__sub">Selected projects demonstrating data engineering and full-stack development.</p>
+
+        <!-- Featured -->
+        <div class="project-featured">
+          <div class="project-featured__badge">
+            <span class="pulse-dot pulse-dot--blue"></span>
+            Featured · In Progress
+          </div>
+          <div class="project-featured__inner">
+            <div class="project-featured__text">
+              <h3 class="project-featured__title">Fishing Data Pipeline<br />&amp; Analytics System</h3>
+              <p class="project-featured__desc">
+                Currently building a data engineering pipeline that ingests, processes,
+                and analyzes fishing data to generate insights such as optimal fishing
+                conditions and catch trends. Designed for extensibility — ingestion
+                adapters, transformation layers, and an analytics API.
+              </p>
+              <div class="project-featured__tags">
+                <span class="tag tag--blue">Python</span>
+                <span class="tag tag--blue">SQL</span>
+                <span class="tag tag--blue">REST APIs</span>
+                <span class="tag tag--purple">Data Pipeline</span>
+                <span class="tag tag--purple">Analytics</span>
+              </div>
+              <div class="project__actions">
+                <a href="#" class="btn btn--primary btn--sm">View Code</a>
+                <a href="#" class="btn btn--ghost btn--sm">Live Demo</a>
+              </div>
+            </div>
+            <div class="project-featured__visual">
+              <div class="pipeline-viz">
+                <div class="pipeline-viz__node">
+                  <div class="pipeline-viz__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                  </div>
+                  <span>Ingest</span>
+                </div>
+                <div class="pipeline-viz__arrow">→</div>
+                <div class="pipeline-viz__node">
+                  <div class="pipeline-viz__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 3v18M3 12l9-9 9 9"/>
+                    </svg>
+                  </div>
+                  <span>Transform</span>
+                </div>
+                <div class="pipeline-viz__arrow">→</div>
+                <div class="pipeline-viz__node pipeline-viz__node--accent">
+                  <div class="pipeline-viz__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M21.21 15.89A10 10 0 118 2.83M22 12A10 10 0 0012 2v10z"/>
+                    </svg>
+                  </div>
+                  <span>Analyze</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary cards -->
+        <div class="projects__grid">
+
+          <div class="project-card">
+            <div class="project-card__header">
+              <div class="project-card__icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" title="View Code">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" class="project-card__link" title="Live Demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">VoiceUp Athletics</h3>
+            <p class="project-card__desc">
+              A multi-tenant SaaS platform with scalable backend systems, REST APIs,
+              and role-based authentication. Built to handle team management,
+              communication, and analytics for athletic programs.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag tag--purple">Node.js</span>
+              <span class="tag tag--purple">Express</span>
+              <span class="tag tag--blue">TypeScript</span>
+              <span class="tag tag--teal">REST API</span>
+              <span class="tag tag--teal">RBAC</span>
+            </div>
+            <div class="project__actions">
+              <a href="#" class="btn btn--outline btn--sm">View Code</a>
+              <a href="#" class="btn btn--ghost btn--sm">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="project-card project-card--dim">
+            <div class="project-card__header">
+              <div class="project-card__icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18M9 21V9"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="project-card__title">More Coming Soon</h3>
+            <p class="project-card__desc">
+              Additional projects are in development. Check back or follow on
+              GitHub for the latest updates on new data engineering and
+              backend projects.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag tag--dim">In Progress</span>
+            </div>
+            <div class="project__actions">
+              <a href="https://github.com/jformani" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">GitHub Profile</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Experience ────────────────────────────────────────── -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__label">04 — Experience</div>
+        <h2 class="section__heading">Where I've Worked</h2>
+        <p class="section__sub">Roles that shaped my technical foundations.</p>
+
+        <div class="timeline">
+
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__connector"></div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <div>
+                  <h3 class="timeline__role">IT Support Specialist</h3>
+                  <p class="timeline__org">Ashland University</p>
+                </div>
+                <span class="timeline__date">2023 — Present</span>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Provided technical support for faculty, staff, and students across campus systems.</li>
+                <li>Managed hardware/software troubleshooting, network diagnostics, and account provisioning.</li>
+                <li>Documented and resolved tickets using ITSM workflows, reducing resolution time.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--dim">Windows</span>
+                <span class="tag tag--dim">Networking</span>
+                <span class="tag tag--dim">ITSM</span>
+                <span class="tag tag--dim">Active Directory</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__dot timeline__dot--dim"></div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <div>
+                  <h3 class="timeline__role">IT Support Technician Intern</h3>
+                  <p class="timeline__org">Reliable Solutions Group</p>
+                </div>
+                <span class="timeline__date">Summer 2022</span>
+              </div>
+              <ul class="timeline__bullets">
+                <li>Supported managed service operations for small to mid-sized business clients.</li>
+                <li>Assisted with infrastructure setup, patch management, and security configurations.</li>
+                <li>Gained exposure to cloud infrastructure and remote support tooling.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag tag--dim">MSP</span>
+                <span class="tag tag--dim">Cloud</span>
+                <span class="tag tag--dim">Patch Management</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Education inline -->
+        <div class="education">
+          <div class="section__label" style="margin-top: 3rem;">Education</div>
+          <div class="education__card">
+            <div class="education__logo">AU</div>
+            <div class="education__text">
+              <h3 class="education__school">Ashland University</h3>
+              <p class="education__degree">Bachelor of Science in Computer Science</p>
+              <p class="education__dates">August 2023 — May 2026 (Expected)</p>
+            </div>
+            <div class="education__badge">B.S. CS</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── Contact ───────────────────────────────────────────── -->
+    <section class="section" id="contact">
+      <div class="container contact__inner">
+        <div class="section__label">05 — Contact</div>
+        <h2 class="section__heading">Let's Connect</h2>
+        <p class="section__sub contact__sub">
+          Open to full-time roles, internships, and collaborative projects in
+          data engineering and backend development.
+        </p>
+        <div class="contact__grid">
+
+          <a href="mailto:jformani@example.com" class="contact-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M2 7l10 7 10-7"/>
+              </svg>
+            </div>
+            <div class="contact-card__text">
+              <span class="contact-card__label">Email</span>
+              <span class="contact-card__value">jformani@example.com</span>
+            </div>
+            <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="https://github.com/jformani" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </div>
+            <div class="contact-card__text">
+              <span class="contact-card__label">GitHub</span>
+              <span class="contact-card__value">github.com/jformani</span>
+            </div>
+            <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="https://linkedin.com/in/jformani" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div class="contact-card__text">
+              <span class="contact-card__label">LinkedIn</span>
+              <span class="contact-card__value">linkedin.com/in/jformani</span>
+            </div>
+            <svg class="contact-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__logo">JF<span>.</span></a>
+      <p class="footer__copy">
+        Designed &amp; built by Jason Formani · 2026
+      </p>
+      <div class="footer__socials">
+        <a href="https://github.com/jformani" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/jformani" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
