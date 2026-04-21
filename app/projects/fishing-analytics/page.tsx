@@ -69,17 +69,6 @@ export default function AnglrDemo() {
             <div className="max-w-3xl">
               <div className="section-kicker">Project Case Study</div>
 
-              {/* App icon */}
-              <div className="mt-2 mb-6 inline-block overflow-hidden rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
-                <Image
-                  src="/anglr-icon.png"
-                  alt="Anglr app icon"
-                  width={72}
-                  height={72}
-                  className="block"
-                />
-              </div>
-
               {/* Status badges */}
               <div className="flex flex-wrap items-center gap-3">
                 <span className="tag tag-blue">Featured Project</span>
@@ -180,15 +169,13 @@ export default function AnglrDemo() {
                     style={{ aspectRatio: '9/16', maxHeight: '340px' }}
                   >
                     <div className="flex flex-col items-center gap-3 p-8 text-center">
-                      <div className="overflow-hidden rounded-xl opacity-60 shadow-[0_4px_16px_rgba(0,0,0,0.4)]">
-                        <Image
-                          src="/anglr-icon.png"
-                          alt="Anglr"
-                          width={56}
-                          height={56}
-                          className="block"
-                        />
-                      </div>
+                      <Image
+                        src="/appIconRound.png"
+                        alt="Anglr"
+                        width={56}
+                        height={56}
+                        className="opacity-60"
+                      />
                       <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/35">
                         Coming Soon
                       </p>
