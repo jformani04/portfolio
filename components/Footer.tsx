@@ -8,7 +8,7 @@ export default function Footer() {
         <p className="text-sm text-white/40">Designed and built by Jason Formani · 2026</p>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/jformani"
+            href="https://github.com/jformani04"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/35 transition-colors hover:text-white"

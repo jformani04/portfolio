@@ -11,8 +11,8 @@ const contacts = [
   },
   {
     label: 'GitHub',
-    value: 'github.com/jformani',
-    href: 'https://github.com/jformani',
+    value: 'github.com/jformani04',
+    href: 'https://github.com/jformani04',
     icon: <GithubIcon />,
   },
   {

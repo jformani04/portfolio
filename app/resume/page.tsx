@@ -47,8 +47,8 @@ export default function ResumePage() {
             <a href="mailto:jformani04@outlook.com" className="hover:text-blue transition-colors flex items-center gap-1.5">
               <EmailIcon /> jformani04@outlook.com
             </a>
-            <a href="https://github.com/jformani" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
-              <GithubIcon /> github.com/jformani
+            <a href="https://github.com/jformani04" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
+              <GithubIcon /> github.com/jformani04
             </a>
             <a href="https://www.linkedin.com/in/jason-formani-086aaa33b" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-colors flex items-center gap-1.5">
               <LinkedinIcon /> www.linkedin.com/in/jason-formani-086aaa33b
@@ -141,13 +141,13 @@ export default function ResumePage() {
               title="Fishing Analytics — Mobile App"
               tags={['Python', 'React Native (Expo)', 'SQL', 'REST APIs', 'AI / ML']}
               desc="AI-powered mobile application built with Expo featuring real-time data processing, predictive analytics, and personalized user insights. Ingests environmental and catch data, runs transformation pipelines, and surfaces actionable fishing condition recommendations."
-              href="https://github.com/jformani"
+              href="https://github.com/jformani04"
             />
             <ProjectEntry
               title="VoiceUp Athletics"
               tags={['Node.js', 'Express', 'TypeScript', 'REST API', 'RBAC']}
               desc="Scalable multi-tenant SaaS platform with role-based access control, REST APIs, and backend systems designed for athletic program management, team communication, and analytics."
-              href="https://github.com/jformani"
+              href="https://polite-bay-078ad520f.1.azurestaticapps.net/"
             />
           </div>
         </Section>

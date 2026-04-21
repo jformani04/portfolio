@@ -56,7 +56,7 @@ export default function Hero() {
                 View Resume
               </Link>
               <a
-                href="https://github.com/jformani"
+                href="https://github.com/jformani04"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-ghost"
@@ -86,8 +86,8 @@ export default function Hero() {
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 { label: 'Primary Track', value: 'Data Engineering' },
-                { label: 'Working Style', value: 'Scalable + Practical' },
-                { label: 'Strengths', value: 'Backend, APIs, Analytics' },
+                { label: 'Working Style', value: 'Efficient + Practical' },
+                { label: 'Strengths', value: 'Fullstack, APIs, Analytics' },
                 { label: 'Location', value: 'Ohio, USA' },
               ].map(({ label, value }) => (
                 <div key={label} className="card p-4">

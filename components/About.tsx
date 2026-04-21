@@ -78,8 +78,8 @@ export default function About() {
                   Strengths
                 </p>
                 <p className="mt-3 text-sm leading-7 text-white/62">
-                  Troubleshooting, backend foundations, API design, data processing, and building
-                  software with clarity from the start.
+                  Fullstack development, API design, and analytics — building end-to-end systems
+                  with clean architecture and data-driven decisions.
                 </p>
               </div>
             </div>
